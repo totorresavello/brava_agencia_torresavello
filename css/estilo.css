@@ -1,0 +1,146 @@
+.bgColor{
+    background-color:aquamarine;
+}
+li{list-style-type: none;}
+a{
+    text-decoration: none;
+}
+.imgHome{
+    margin: 30px;
+    padding: 25px;
+}
+main li {
+    font-size: 25px;
+}
+.fontSize{
+    font-size: 25px;
+}
+div ul li {
+    list-style-type: none;
+    font-weight: bold;
+}
+.pdTop{
+    padding-top: 50px;
+}
+
+.txtMain{
+   font-size: 25px;
+}
+nav{width: 100%;}
+h1{font-size: 2rem;}
+footer{border-top: solid 1px pink;}
+/*GRID INDEX */
+.gridIndex{
+	display: grid;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto auto;
+}
+header{grid-area: header;}
+main{grid-area: main;}
+footer{grid-area: footer;} 
+/*GRID MAIN */
+.gridMain{
+	display: grid;
+	grid-template-areas: 
+	"encabezado encabezado"
+	"imgMain txtMain";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+.encabezado{grid-area: encabezado; display: flex; flex-direction: column;}
+.imgMain{grid-area: imgMain;}
+.txtMain{grid-area: txtMain; padding: 50px;}
+.gridListaMain{
+    display: flex;
+    justify-content: center;
+}
+/*Grid Lista Main*/
+.gridListaMain{
+    display: grid;
+    grid-template-areas:
+    "primer segundo tercero";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 106px ;
+}
+.primer{grid-area: primer; display: flex; justify-content: center;}
+.segundo{grid-area: segundo;  display: flex; justify-content: center}
+.tercero{grid-area: tercero;  display: flex; justify-content: center}
+/*Grid Main Portafolio*/
+.gridMainPort{
+    display: grid;
+    grid-template-areas: 
+    "portafolio"
+    "nombre"
+    "imgPort"
+    "texto"
+    "nombre2"
+    "imgPort2"
+    "texto2"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+}
+.portafolio{grid-area: portafolio;}
+.nombre{grid-area: nombre; display: flex; justify-content: center;}
+.imgPort{grid-area: imgPort;  align-self: center; justify-self: center;}
+.texto{grid-area: texto;  display: flex; flex-wrap: wrap;}
+.nombre2{grid-area: nombre2;  display: flex; justify-content: center;}
+.imgPort2{grid-area: imgPort2; align-self: center; justify-self: center;}
+.texto2{grid-area: texto2; display: flex; flex-wrap: wrap;}
+/*FLEXBOX*/
+header,ul,footer{
+    display: flex;
+    justify-content: space-around;
+}
+.encabezado{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.imgMain{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*MEDIA QUERIE*/
+/*MOBILE*/
+@media only screen and (max-width:768px){
+    /*HOME*/  
+    header, footer{ display: flex; flex-direction: column;}
+    ul{display: flex; padding: 0;} 
+
+    .gridMain{grid-template-areas:
+        "encabezado"
+        "imgHome"
+        "txtMain";}
+    .encabezado{grid-area: encabezado;}
+    .imgHome{grid-area: imgHome;}
+    .txtMain{grid-area: txtMain;}
+    .gridListaMain{
+        display: grid;
+        grid-template-areas:
+        "primer segundo tercero";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:auto ;}
+    .primer{grid-area: primer; display: flex; justify-content: center;}
+    .segundo{grid-area: segundo;  display: flex; justify-content: center}
+    .tercero{grid-area: tercero;  display: flex; justify-content: center}
+    
+    /*PORTAFOLIO*/
+    .imgPort, .imgPort2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .texto, .texto2{
+        display: flex;
+        justify-content: center;
+    }
+}
+ 
+
+
