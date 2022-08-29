@@ -1,5 +1,6 @@
 .bgColor{
-    background-color:aquamarine;
+    background: rgb(0,65,107);
+    background: linear-gradient(90deg, rgba(0,65,107,0.6138830532212884) 1%, rgba(9,115,121,0.6054796918767507) 51%, rgba(0,255,248,1) 92%);
 }
 li{list-style-type: none;}
 a{
@@ -28,7 +29,14 @@ div ul li {
 }
 nav{width: 100%;}
 h1{font-size: 2rem;}
-footer{border-top: solid 1px pink;}
+footer{border-top: solid 1px #0068D6}
+.translateY{
+	transition: all 1s;
+}
+.translateY:hover{
+	transform: translateY(-20px);
+}
+
 /*GRID INDEX */
 .gridIndex{
 	display: grid;
@@ -142,5 +150,6 @@ header,ul,footer{
     }
 }
  
+
 
 
